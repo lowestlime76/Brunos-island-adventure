@@ -40,6 +40,12 @@ namespace RPG.Quest
 
             animatorCmp.SetBool(Constants.IS_SHAKING_ANIMATOR_PARAM, false);
             hasBeenOpened = true;
+
+            AudioSource audioSourceCmp = GetComponent<AudioSource>();
+
+            if (audioSourceCmp.clip == null) return;
+
+            audioSourceCmp.Play();
         }
 
         private void CheckItem(string itemName)

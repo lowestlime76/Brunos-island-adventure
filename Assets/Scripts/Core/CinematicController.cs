@@ -10,10 +10,22 @@ namespace RPG.Core
         PlayableDirector playableDirectorCmp;
         Collider colliderCmp;
 
+        [SerializeField] private bool customPlayOnAwake = false;
+
         private void Awake()
         {
             playableDirectorCmp = GetComponent<PlayableDirector>();
             colliderCmp = GetComponent<Collider>();
+        }
+
+        private void Start()
+        {
+            colliderCmp.enabled = !PlayerPrefs.HasKey("SceneIndex");
+
+            if (!customPlayOnAwake) return;
+
+            colliderCmp.enabled = false;
+            playableDirectorCmp.Play();
         }
 
         private void OnEnable()
