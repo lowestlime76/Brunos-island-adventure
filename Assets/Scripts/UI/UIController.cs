@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -26,9 +27,13 @@ namespace RPG.UI
         public UIQuestItemState questItemState;
         public UIVictoryState victoryState;
         public UIGameOverState gameOverState;
+        public AudioClip gameOverAudio;
+        public AudioClip victoryAudio;
+        [NonSerialized] public AudioSource audioSourceCmp;
 
         private void Awake()
         {
+            audioSourceCmp = GetComponent<AudioSource>();
             uiDocumentCmp = GetComponent<UIDocument>();
             root = uiDocumentCmp.rootVisualElement;
 

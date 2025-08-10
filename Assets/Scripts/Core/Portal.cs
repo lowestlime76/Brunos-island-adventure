@@ -24,7 +24,7 @@ namespace RPG.Core
 
             EventManager.RaisePortalEnter(other, nextSceneIndex);
 
-            SceneTransition.Initiate(nextSceneIndex);
+            StartCoroutine(SceneTransition.Initiate(nextSceneIndex));
         }
     }
 }

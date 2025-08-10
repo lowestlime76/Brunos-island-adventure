@@ -22,12 +22,16 @@ namespace RPG.UI
                 Constants.UI_ACTION_MAP
             );
             victoryContainer.style.display = DisplayStyle.Flex;
+
+            controller.audioSourceCmp.clip = controller.victoryAudio;
+
+            controller.audioSourceCmp.Play();
         }
 
         public override void SelectButton()
         {
             PlayerPrefs.DeleteAll();
-            SceneTransition.Initiate(0);
+            controller.StartCoroutine(SceneTransition.Initiate(0));
         }
     }
 }

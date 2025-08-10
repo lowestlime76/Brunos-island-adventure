@@ -145,6 +145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 2797168700547304421, guid: 3ba556c6b1dbfb44680d6793fc660700, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9907276ff6329074bad0aa1a2448597b, type: 3}
     - target: {fileID: 5301418265998701882, guid: 3ba556c6b1dbfb44680d6793fc660700, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

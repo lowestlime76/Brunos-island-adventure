@@ -84930,6 +84930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe79213a7867f44fafd408493cfc6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customPlayOnAwake: 0
 --- !u!65 &2127870949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85479,6 +85480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 2797168700547304421, guid: 3ba556c6b1dbfb44680d6793fc660700, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 51f7159c61442e74587b4817be514ad6, type: 3}
     - target: {fileID: 5301418265998701882, guid: 3ba556c6b1dbfb44680d6793fc660700, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
