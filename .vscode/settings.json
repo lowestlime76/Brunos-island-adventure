@@ -57,5 +57,6 @@
     "indenticator.inner.showHover": true,
     "indenticator.showHover": true,
     "workbench.hover.delay": 300,
-    "editor.hover.delay": 200
+    "editor.hover.delay": 200,
+    "dotnet.preferCSharpExtension": true
 }

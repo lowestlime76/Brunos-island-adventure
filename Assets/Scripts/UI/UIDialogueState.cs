@@ -35,6 +35,8 @@ namespace RPG.UI
                 Constants.GAME_MANAGER_TAG
                 ).GetComponent<PlayerInput>();
             playerInputCmp.SwitchCurrentActionMap(Constants.UI_ACTION_MAP);
+
+            controller.canPause = false;
         }
 
         public override void SelectButton()
@@ -117,6 +119,8 @@ namespace RPG.UI
             playerInputCmp.SwitchCurrentActionMap(
                 Constants.GAMEPLAY_ACTION_MAP
             );
+
+            controller.canPause = true;
         }
 
         public void VerifyQuest()

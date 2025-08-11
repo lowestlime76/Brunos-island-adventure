@@ -30,6 +30,9 @@ namespace RPG.UI
         public AudioClip gameOverAudio;
         public AudioClip victoryAudio;
         [NonSerialized] public AudioSource audioSourceCmp;
+        public UIPauseState pauseState;
+        public UIUnpausedState unpauseState;
+        public bool canPause = true;
 
         private void Awake()
         {
@@ -48,6 +51,8 @@ namespace RPG.UI
             questItemState = new UIQuestItemState(this);
             victoryState = new UIVictoryState(this);
             gameOverState = new UIGameOverState(this);
+            pauseState = new UIPauseState(this);
+            unpauseState = new UIUnpausedState(this);
 
         }
 
@@ -148,6 +153,16 @@ namespace RPG.UI
         private void HandleGameOver()
         {
             currentState = gameOverState;
+            currentState.EnterState();
+        }
+
+        public void HandlePause(InputAction.CallbackContext context)
+        {
+            if (!context.performed || !canPause) return;
+
+            currentState = currentState == pauseState ?
+                unpauseState :
+                pauseState;
             currentState.EnterState();
         }
     }
